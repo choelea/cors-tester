@@ -48,7 +48,15 @@ module.exports = {
       ref  : 'origin/master',
       repo : 'git@github.com:choelea/cors-tester.git',
       path : '/home/joe/nodejsapp/cors-tester',
-      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production'
+      'post-deploy' : 'pm2 reload ecosystem.config.js --env production'
+    },
+    install : {
+      user : 'joe',
+      host : '182.254.242.31',
+      ref  : 'origin/master',
+      repo : 'git@github.com:choelea/cors-tester.git',
+      path : '/home/joe/nodejsapp/cors-tester',
+      'post-deploy' : 'cd api && npm install && cd ../api-cors && npm install && cd ../web && npm install'
     }
   }
 };
