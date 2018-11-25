@@ -23,13 +23,23 @@ module.exports = {
         NODE_ENV: 'production',
         PORT: 4001
       }
-    },{
+    },
+    {
       name      : 'cors-tester-api-cors',
       script    : 'api-cors/bin/www',
       instances: 1,
       env_production: {
         NODE_ENV: 'production',
         PORT: 4002
+      }
+    },
+    ,{
+      name      : 'cors-tester-api-cors-session',
+      script    : 'api-cors-with-session/bin/www',
+      instances: 1,
+      env_production: {
+        NODE_ENV: 'production',
+        PORT: 4003
       }
     }
   ],
