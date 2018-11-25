@@ -66,7 +66,7 @@ module.exports = {
       ref  : 'origin/master',
       repo : 'git@github.com:choelea/cors-tester.git',
       path : '/home/joe/nodejsapp/cors-tester',
-      'post-deploy' : 'cd api && npm install && cd ../api-cors && npm install && cd ../web && npm install'
+      'post-deploy' : 'cd api && npm install && cd ../api-cors && npm install && cd ../web && npm install && cd ../api-cors-with-session && npm install'
     }
   }
 };
