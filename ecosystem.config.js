@@ -33,7 +33,7 @@ module.exports = {
         PORT: 4002
       }
     },
-    ,{
+    {
       name      : 'cors-tester-api-cors-session',
       script    : 'api-cors-with-session/bin/www',
       instances: 1,
