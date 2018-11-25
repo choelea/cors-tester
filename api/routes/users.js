@@ -3,6 +3,7 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
+  console.log('Request For Users Is Excuted..................')
   res.json([{'name':'Joe'},{'name':'Mark'}]);
 });
 
