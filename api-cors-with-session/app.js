@@ -14,6 +14,15 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 hbs.registerPartials(__dirname + '/views/partials');
+
+const corsOptioin = {
+  "origin": /jiu-shu\.com$/,
+  "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+  "preflightContinue": false,
+  "optionsSuccessStatus": 204,
+  "credentials":true
+};
+app.use(cors(corsOptioin));
 const corsOptioin = {
   "origin": "*",
   "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",

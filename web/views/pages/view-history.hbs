@@ -17,6 +17,9 @@
             $.ajax({
                 url: 'http://corssession.jiu-shu.com/viewhistories',
                 type: 'GET',
+                xhrFields: {
+                    withCredentials: true
+                },
                 success: function(result) {
                     $("#viewHistory").html(result)
                 }

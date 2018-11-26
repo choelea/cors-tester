@@ -20,11 +20,15 @@
         </li>
         <li class="list-group-item">
             <a target="_blank" href="/client-without-credentials.html">客户端请求没有带cookie</a> 
-            <span>withCredentials: false</span>
+            <span>此浏览记录不会记录在会话中</span>
         </li>
         <li class="list-group-item">
             <a target="_blank" href="/client-with-credentials.html">带Cookie的CORS请求</a> 
-            <span>withCredentials: true</span>
+            <span>此浏览记录会记录在会话中</span>
+        </li>
+        <li class="list-group-item">
+            <a target="_blank" href="/view-history.html">会话里记录的浏览历史</a> 
+            <span>会话里记录的浏览历史: 只有带cookie de cros请求才会成功被记录</span>
         </li>
         <li class="list-group-item">
             <a target="_blank" href="/csrf-chembnb-logout.html">为什么有同源安全策略，还需要CSRF</a> 
