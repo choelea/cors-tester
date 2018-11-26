@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page You Just Viewed</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">   
+</head>
+
+<body>
+    <h1>Page You Just Viewed</h1>
+
+    <p id="viewHistory"> </p>
+    <script  src="https://code.jquery.com/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <img src="http://corssession.jiu-shu.com/viewhistories">
+    <script>
+        $(document).ready(function(){
+            $.ajax({
+                url: 'http://corssession.jiu-shu.com/viewhistories',
+                type: 'GET',
+                success: function(result) {
+                    $("#viewHistory").html(result)
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
