@@ -9,7 +9,7 @@ router.put('/', function(req, res, next) {
   if(req.session.viewhistories){
     req.session.viewhistories.push(req.query.viewUrl)
   }else{
-    req.session.viewhistories = [req.query.viewUrl];
+    req.session.viewhistories = [];
   }
   res.json('ok');
 });

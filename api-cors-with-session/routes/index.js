@@ -5,6 +5,9 @@ var router = express.Router();
 router.get('/', function (req, res, next) {
   let sess = req.session;
   console.log(sess.id);
+  if (!sess.viewhistories) {
+    sess.viewhistories = [];
+  }
   res.render('index');
 });
 module.exports = router;
