@@ -23,14 +23,6 @@ const corsOptioin = {
   "credentials":true
 };
 app.use(cors(corsOptioin));
-const corsOptioin = {
-  "origin": "*",
-  "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
-  "preflightContinue": false,
-  "optionsSuccessStatus": 204,
-  "credentials":true
-};
-app.use(cors(corsOptioin));
 app.set('trust proxy', 1)
 app.use(session({ secret: 'secretkey', resave: false, saveUninitialized: false })); 
 // uncomment after placing your favicon in /public
