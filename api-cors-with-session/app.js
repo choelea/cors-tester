@@ -16,11 +16,11 @@ app.set('view engine', 'hbs');
 hbs.registerPartials(__dirname + '/views/partials');
 
 const corsOptioin = {
-  "origin": /jiu-shu\.com$/,
+  "origin": /\.jiu-shu\.com$/, // jiu-shu.com 的所有子域名
   "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
-  "preflightContinue": false,
   "optionsSuccessStatus": 204,
-  "credentials":true
+  "credentials":true,
+  "maxAge":3600 // // 一个小时内预检一次就OK啦
 };
 app.use(cors(corsOptioin));
 app.set('trust proxy', 1)

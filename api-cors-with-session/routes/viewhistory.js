@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
 });
 router.put('/', function(req, res, next) {
   if(req.session.viewhistories){
-    req.session.viewhistories.push(req.query.viewUrl)
+    req.session.viewhistories.push(req.body.viewUrl)
   }else{
     req.session.viewhistories = [];
   }
