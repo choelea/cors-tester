@@ -15,14 +15,15 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 hbs.registerPartials(__dirname + '/views/partials');
 
-const corsOptioin = {
-  "origin": /\.jiu-shu\.com$/, // jiu-shu.com 的所有子域名
+const corsOption = {
+  "origin": /\.jiu-shu\.com$/, //jiu-shu.com 的所有子域名
   "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
   "optionsSuccessStatus": 204,
+  "allowedHeaders":"X-Csrf-Token, X-Requested-With",
   "credentials":true,
-  "maxAge":3600 // // 一个小时内预检一次就OK啦
+  "maxAge":3600  //一个小时内预检一次就OK啦
 };
-app.use(cors(corsOptioin));
+app.use(cors(corsOption));
 app.set('trust proxy', 1)
 app.use(session({ secret: 'secretkey', resave: false, saveUninitialized: false })); 
 // uncomment after placing your favicon in /public
